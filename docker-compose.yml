@@ -1,9 +1,25 @@
 version: "3.8"
 
 services:
+
+  postgres:
+    image: postgres
+    restart: always
+    ports:
+        - '5432:5432'
+    volumes:
+        - './pgdata:/var/lib/postgresql/data'
+    environment:
+        - POSTGRES_USER=mageai
+        - POSTGRES_PASSWORD=${ADMIN_PASSWORD}
+        - POSTGRES_DB=mageai
+        - PG_DATA=/var/lib/postgresql/data/pgdata
+
   mage:
     image: mageai/mageai:latest
     restart: always
+    environment:
+      - MAGE_DATABASE_CONNECTION_URL=postgresql+psycopg2://mageai:${ADMIN_PASSWORD}@postgres_db:5432/<database>
     volumes:
       - './data:/home/src'
     ports:
