@@ -20,6 +20,7 @@ services:
     restart: always
     environment:
       - MAGE_DATABASE_CONNECTION_URL=postgresql+psycopg2://mageai:${ADMIN_PASSWORD}@postgres_db:5432/<database>
+      - REQUIRE_USER_AUTHENTICATION=1
     volumes:
       - './data:/home/src'
     ports:
