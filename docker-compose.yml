@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  mage:
+    image: mageai/mageai:latest
+    restart: always
+    volumes:
+      - './data:/home/src'
+    ports:
+      - 172.17.0.1:6789:6789
+
+  
