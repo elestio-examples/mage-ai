@@ -18,7 +18,7 @@ services:
   mage:
     image: mageai/mageai:latest
     restart: always
-    environment:
+    # environment:
       # - MAGE_DATABASE_CONNECTION_URL=postgresql+psycopg2://mageai:${ADMIN_PASSWORD}@postgres_db:5432/mageai
       # - REQUIRE_USER_AUTHENTICATION=1
     volumes:
