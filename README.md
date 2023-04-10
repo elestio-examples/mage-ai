@@ -13,5 +13,5 @@ Deploy Mage AI server with CI/CD on Elestio
 You can can open Mage AI UI here:
 
     URL: https://[CI_CD_DOMAIN]
-    email:[ADMIN_EMAIL]
+    email: [ADMIN_EMAIL]
     password: [ADMIN_PASSWORD]
