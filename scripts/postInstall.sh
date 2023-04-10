@@ -3,7 +3,7 @@ set -o allexport; source .env; set +o allexport;
 
 #wait until the server is ready
 echo "Waiting for software to be ready ..."
-sleep 20s;
+sleep 60s;
 
 login=$(curl https://${DOMAIN}/api/sessions?api_key=zkWlN0PkIKSN0C11CfUHUj84OT5XOJ6tDZ6bDRO2 \
   -H 'accept: application/json, text/plain, */*' \
