@@ -14,7 +14,8 @@ environments:
     value: "[EMAIL]"
   - key: "DOMAIN"
     value: "[CI_CD_DOMAIN]"
-
+  - key: "SOFTWARE_VERSION_TAG"
+    value: "latest"
 config:
   runTime: "dockerCompose"
   version: ""
