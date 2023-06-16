@@ -16,7 +16,7 @@ services:
         - PG_DATA=/var/lib/postgresql/data/pgdata
 
   mage:
-    image: mageai/mageai:latest
+    image: mageai/mageai:${SOFTWARE_VERSION_TAG}
     restart: always
     environment:
       # - MAGE_DATABASE_CONNECTION_URL=postgresql+psycopg2://mageai:${ADMIN_PASSWORD}@postgres_db:5432/mageai
