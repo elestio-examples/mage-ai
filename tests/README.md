@@ -60,10 +60,8 @@ Here are some example snippets to help you get started creating a container.
     version: "3.3"
     services:
         postgres:
-            image: postgres
+            image: elestio/postgres:latest
             restart: always
-            #ports:
-            #    - '5432:5432'
             volumes:
                 - './pgdata:/var/lib/postgresql/data'
             environment:
@@ -76,7 +74,6 @@ Here are some example snippets to help you get started creating a container.
             image: elestio4test/mageai:${SOFTWARE_VERSION_TAG}
             restart: always
             environment:
-                # - MAGE_DATABASE_CONNECTION_URL=postgresql+psycopg2://mageai:${ADMIN_PASSWORD}@postgres_db:5432/mageai
                 - REQUIRE_USER_AUTHENTICATION=1
             volumes:
                 - './data:/home/src'
@@ -84,7 +81,12 @@ Here are some example snippets to help you get started creating a container.
             ports:
                 - 172.17.0.1:6789:6789
 
+### Environment variables
 
+|       Variable       | Value (example) |
+| :------------------: | :-------------: |
+| SOFTWARE_VERSION_TAG |     latest      |
+|    ADMIN_PASSWORD    |  your-password  |
 
 # Maintenance
 
