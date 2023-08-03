@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
-docker build . --tag elestio4test/mageai:latest
+docker buildx build . --output type=docker,name=elestio4test/mage-ai:latest | docker load
+
+
