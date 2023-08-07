@@ -71,7 +71,7 @@ Here are some example snippets to help you get started creating a container.
                 - PG_DATA=/var/lib/postgresql/data/pgdata
 
         mage:
-            image: elestio4test/mageai:${SOFTWARE_VERSION_TAG}
+            image: elestio4test/mage-ai:${SOFTWARE_VERSION_TAG}
             restart: always
             environment:
                 - REQUIRE_USER_AUTHENTICATION=1
