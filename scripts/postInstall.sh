@@ -20,7 +20,7 @@ login=$(curl https://${DOMAIN}/api/sessions?api_key=zkWlN0PkIKSN0C11CfUHUj84OT5X
   -H 'accept: application/json, text/plain, */*' \
   -H 'accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,he;q=0.6' \
   -H 'content-type: application/json' \
-  -H 'cookie: REQUIRE_USER_AUTHENTICATION=1; oauth_token='${token}'' \
+  -H 'cookie: REQUIRE_USER_AUTHENTICATION=1; REQUIRE_USER_PERMISSIONS=true; oauth_token='${token}'' \
   -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36' \
-  --data-raw '{"user":{"username":"root","email":"'${ADMIN_EMAIL}'","password_current":"admin","password":"'${ADMIN_PASSWORD}'","password_confirmation":"'${ADMIN_PASSWORD}'"},"api_key":"zkWlN0PkIKSN0C11CfUHUj84OT5XOJ6tDZ6bDRO2"}' \
+  --data-raw '{"user":{"avatar":null,"first_name":null,"last_name":null,"password":"'${ADMIN_PASSWORD}'","password_confirmation":"'${ADMIN_PASSWORD}'","password_current":"admin","username":"admin","email":"'${ADMIN_EMAIL}'","role_ids":[1]},"api_key":"zkWlN0PkIKSN0C11CfUHUj84OT5XOJ6tDZ6bDRO2"}' \
   --compressed
